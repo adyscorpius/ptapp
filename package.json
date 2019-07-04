@@ -12,7 +12,9 @@
     "compile": "babel src/",
     "build": "babel src/ --out-dir build --copy-files",
     "fix": "eslint --fix --ext .js src/",
-    "win-android": "cd android && gradlew clean && cd .. && react-native run-android"
+    "win-android": "cd android && gradlew clean && cd .. && react-native run-android",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "color": "^1.0.3",
@@ -26,7 +28,7 @@
     "native-base": "^2.3.1",
     "next-frame": "^0.2.3",
     "react": "16.3.1",
-    "react-native": "0.55.4",
+    "react-native": "0.60.0",
     "react-native-amplitude-analytics": "^0.1.14",
     "react-native-background-fetch": "^2.4.1",
     "react-native-calendars": "^1.9.2",
@@ -57,7 +59,8 @@
     "redux": "^3.7.2",
     "redux-persist": "5.10.0",
     "redux-persist-filesystem-storage": "1.2.0",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -78,5 +81,6 @@
     "transformIgnorePatterns": [
       "node_modules/(?!(react-native|react-native-firebase|react-native-codepush|node-modules)/)"
     ]
-  }
+  },
+  "snyk": true
 }
