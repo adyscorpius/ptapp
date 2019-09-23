@@ -5,25 +5,28 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "prettier": "prettier — single-quote — trailing-comma all — write \"lib/**/*.js\" \"src/**/*.ts\""
+    "prettier": "prettier — single-quote — trailing-comma all — write \"lib/**/*.js\" \"src/**/*.ts\"",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "@types/react-redux": "^5.0.14",
-    "axios": "^0.17.1",
+    "axios": "^0.18.1",
     "moment": "^2.20.1",
     "react": "16.2.0",
-    "react-native": "0.52.1",
+    "react-native": "0.60.0",
     "react-native-cookies": "^3.2.0",
     "react-native-firebase": "^3.2.4",
     "react-native-linear-gradient": "^2.4.0",
     "react-native-message-bar": "^2.0.9",
-    "react-native-vector-icons": "^4.5.0",
-    "react-navigation": "^1.0.0-beta.27",
+    "react-native-vector-icons": "^6.4.1",
+    "react-navigation": "^1.0.0",
     "react-redux": "^5.0.6",
     "recyclerlistview": "^1.2.6",
     "redux": "^3.7.2",
     "redux-persist": "^5.5.0",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "snyk": "^1.228.3"
   },
   "devDependencies": {
     "@types/jest": "^22.1.0",
@@ -70,5 +73,6 @@
     "assets": [
       "./assets/fonts/"
     ]
-  }
+  },
+  "snyk": true
 }
