@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "prettier": "prettier — single-quote — trailing-comma all — write \"lib/**/*.js\" \"src/**/*.ts\""
+    "prettier": "prettier — single-quote — trailing-comma all — write \"lib/**/*.js\" \"src/**/*.ts\"",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "@types/react-redux": "^5.0.14",
@@ -23,7 +25,8 @@
     "recyclerlistview": "^1.2.6",
     "redux": "^3.7.2",
     "redux-persist": "^5.5.0",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@types/jest": "^22.1.0",
@@ -70,5 +73,6 @@
     "assets": [
       "./assets/fonts/"
     ]
-  }
+  },
+  "snyk": true
 }
